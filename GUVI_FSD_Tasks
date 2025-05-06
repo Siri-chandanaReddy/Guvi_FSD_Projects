@@ -1,1 +1,91 @@
+1. Scenario: Constructor Confusion
+You are building a class Book with a constructor that accepts a title and an author. However, when creating a Book object using:
+Book b = new Book();
+You get a compile-time error.
+public class Book {
+    String title;
+    String author;
+
+    public Book(String title, String author) {
+        this.title = title;
+        this.author = author;
+    }
+}
+Question:
+What is the reason for the compile-time error?
+A.	The class must be declared as abstract
+B. The constructor parameters are incorrect
+C. There is no default constructor defined
+D. Book cannot be instantiated without parameters
+Option D is correct.
+Since we have defined constructor with parameters, the compiler will show compile-time error when creating an object Book b = new Book();with no parameters. 
+
+2. Scenario: Method Overloading or Overriding?
+class Vehicle {
+    void start() {
+        System.out.println("Vehicle starting");
+    }
+}
+
+class Car extends Vehicle {
+    void start(String mode) {
+        System.out.println("Car starting in " + mode + " mode");
+    }
+}
+Question:
+If you run this:
+Car car = new Car();
+car.start();
+What will be printed?
+A.	Vehicle starting
+B. Car starting in null mode
+C. Compilation error
+D. Car starting
+Option A is correct.
+Car Class is inheriting from Vehicle Class. Here the start method in vehicle Class is overloaded by the start method in Car class. When we call car.start(); Java will call the Start() which is in vehicle class with no parameters. Java treats them as two separate methods because they are overloaded. 
+If we call car.start(“jet speed”); the java compiler will look for a method start with parameters and gets the start method in car class.
+
+
+3. Scenario: Tricky Reference Behavior
+class A {
+    int num = 10;
+}
+
+public class Test {
+    public static void main(String[] args) {
+        A obj1 = new A();
+        A obj2 = obj1;
+        obj2.num = 20;
+        System.out.println(obj1.num);
+    }
+}
+Question:
+What will be printed and why?
+A. 10 — obj2 is a separate object
+B. 20 — obj2 and obj1 refer to the same object
+C. Compile-time error
+D. 0 — default value of int
+Option B is correct. Same object reference.
+4. Scenario: Object Nullification
+public class Test {
+    public static void main(String[] args) {
+        String s = "abc";
+        s = null;
+        System.out.println(s.length());
+    }
+}
+Question:
+What will be the result?
+A. 3
+B. 0
+C. NullPointerException
+D. Compile-time error
+Opt C is correct.
+When we declare a string and assign it a value the string variable will be stored in stack and the value will be stored in heap, for more accurate - it will store in String pool. The variable s is referring to the value in the heap abc. 
+Later when will assign null to the variable, that means we are removing the reference to the abc object in the heap. So the s is not referring to any object now.
+When we call s.length(); we get exception NullPointerException. Because calling a method on null will cause error because java cannot find an object to call length method on an object.
+
+
+
+
 
