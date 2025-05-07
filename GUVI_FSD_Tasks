@@ -69,6 +69,7 @@ B. 20 — obj2 and obj1 refer to the same object
 C. Compile-time error
 D. 0 — default value of int
 Option B is correct. Same object reference.
+
 4. Scenario: Object Nullification
 public class Test {
     public static void main(String[] args) {
@@ -88,35 +89,6 @@ When we declare a string and assign it a value the string variable will be store
 Later when will assign null to the variable, that means we are removing the reference to the abc object in the heap. So the s is not referring to any object now.
 When we call s.length(); we get exception NullPointerException. Because calling a method on null will cause error because java cannot find an object to call length method on an object.
 
-5. Scenario: Inheritance + Method Overriding + Constructor Order
-class Animal {
-    Animal() {
-        speak();
-    }
-    void speak() {
-        System.out.println("Animal speaks");
-    }
-}
-
-class Dog extends Animal {
-    String sound = "Bark";
-
-    @Override
-    void speak() {
-        System.out.println(sound.toUpperCase());
-    }
-}
-
-public class Test {
-    public static void main(String[] args) {
-        new Dog();
-    }
-}
-Question:
-What is the output? Why is it not what you'd expect?
-There will be not output coming, we get runtime error by throwing java.lang.NullPointerException  exception. When we execute the program, java will first go to dog object, the goes to the constructor, the constructor will call the super call constructor in the Animal class constructor there is we have speak method, then the speak speak method is overridden in the dog class, in the overridden method we have sound.toUpperCase()since the sound variable is null, the nullpinterexception is throw. 
-WHY the sound variable is null?
-Since – field initialization happens after superclass constructor. Here the java is still constructing the object, the work is not finished. So the field/variable is not initialized yet, that’s the reason the variable is null. 
 5. Scenario: Inheritance + Method Overriding + Constructor Order
 class Animal {
     Animal() {
