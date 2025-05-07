@@ -1,3 +1,6 @@
+__________________________________________________________________________________
+Week 1 Java questions - Java OOP Conceptual Questions
+__________________________________________________________________________________
 1. Scenario: Constructor Confusion
 You are building a class Book with a constructor that accepts a title and an author. However, when creating a Book object using:
 Book b = new Book();
@@ -150,6 +153,9 @@ WHY the sound variable is null?
 Since – field initialization happens after superclass constructor. Here the java is still constructing the object, 
 the work is not finished. So the field/variable is not initialized yet, that’s the reason the variable is null. 
 
+__________________________________________________________________________________
+
+__________________________________________________________________________________
 
 
 
