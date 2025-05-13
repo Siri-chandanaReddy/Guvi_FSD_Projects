@@ -1,0 +1,58 @@
+Week 1 Java questions - JAVA Collections Framework 
+--------------------------------------------------------------------------
+1. E-commerce Cart System
+Scenario: You are designing a shopping cart system. The cart should allow duplicate items (e.g., 2 apples, 3 bananas) and maintain insertion order.
+Question:
+Which collection will you use to represent the items in the cart and why?
+Ans:- Linked Hash Map, it allows duplicates & maintains insertion order
+_______________________________________________________________________________________________________________________________________________________
+2. Auto-Complete Feature
+Scenario: You need to implement an auto-complete feature that suggests words based on prefix input. Suggestions must be sorted alphabetically.
+Question:
+Which Java Collection would you use to store the dictionary of words?
+Ans:- TreeSet – natural Order
+______________________________________________________________________________________________________________________________________________
+ 3. LRU Cache
+Scenario: You are implementing an LRU (Least Recently Used) cache.
+Question:
+Which Java Collection classes will you use and how?
+Ans:- Linked Hash Map
+There is special constructor that is only available for Linked Hash Map
+***---Linked hash Map ( int initialCapacity,  float loadFactor,  boolean accessOrder)---***
+Initial Capacity : the capacity when the beginning of creating an object which we give. It is NOT the limit we fix, just initialing a capacity at start, automatically expands the size when elements are added.
+Load Factor : it tells when the object to be expand at. If we give 0.75f the size of the object  will expand at 75% full of memory. Default is 0.75f.
+Access Order : false = insertion order, true = access order
+Naturally it is insertion order, when we give true it will take access order.
+	Methods that affect access order are :-- get(key) & put(key, value) – only if the key exists. If we add new key it will not affect the access order.
+	Recently used elements go down & not used or least used stays up 
+	If we want to remove least used elements then we have a method removeEldestEntry(), we can override it by extending the linkedHahMap 
+______________________________________________________________________________________________________________________________________________
+ 4. Leaderboard System
+Scenario: You're building a leaderboard where players are ranked by their score in descending order.
+Question:
+Which collection type would you use to store and maintain the leaderboard?
+Ans:- Tree Set by using method decendingset()
+______________________________________________________________________________________________________________________________________________
+ 5. Real-Time Notification System
+Scenario: You are implementing a system where events are published and consumed in the same order they are received.
+Question:
+Which collection will you use for this queue-like structure?
+Ans:- Array deque – FIFO  
+______________________________________________________________________________________________________________________________________________
+ 6. Eliminating Duplicate Emails
+Scenario: You have a list of user email addresses, and you need to filter out duplicates, preserving the order of first appearance.
+Question:
+Which collection is most suitable for this task?
+Ans:- Linked hash Set – insertion order & no duplicates 
+______________________________________________________________________________________________________________________________________________
+ 7. Directory Structure Simulation
+Scenario: You want to simulate a file directory where each folder can have subfolders and files.
+Question:
+What kind of collection or data structure would you use to represent this?
+Ans:- Tree data structure 
+______________________________________________________________________________________________________________________________________________
+ 8. Priority-based Task Scheduling
+Scenario: You’re building a task scheduler where tasks are picked based on their priority.
+Question:
+Which Java Collection would you use to manage and retrieve tasks based on their priority?
+Ans:- Priority Queue 
