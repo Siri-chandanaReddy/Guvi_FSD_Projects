@@ -1,4 +1,4 @@
-Week 1 Java questions - JAVA Collections Framework 
+Week 2 Java questions - JAVA Collections Framework 
 --------------------------------------------------------------------------
 1. E-commerce Cart System
 Scenario: You are designing a shopping cart system. The cart should allow duplicate items (e.g., 2 apples, 3 bananas) and maintain insertion order.
