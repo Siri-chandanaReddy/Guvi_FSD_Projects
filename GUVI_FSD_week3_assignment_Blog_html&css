@@ -1,0 +1,103 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Post</title>
+  <link rel="stylesheet" href="blog.css" />
+</head>
+
+<body>
+  <header>
+    <h1>My JavaScript Blogs</h1>
+  </header>
+
+  <section class="post">
+    <article>
+      <h2>Learning Web Development</h2>
+      <p class="metadata">Author: Jane Doe | Date: May 18, 2025</p>
+
+      <p>Web development is an essential skill in today's digital world. It allows you to create amazing websites and
+        apps.</p>
+
+      <blockquote>
+        "Web development is both an art and a science." — Anonymous
+      </blockquote>
+
+      <h3>Sample Code</h3>
+      <pre><code>
+function greet() {
+  console.log("Hello, world!"); 
+}
+greet();
+      </code></pre>
+
+      <p>Above is a simple JavaScript function that prints a greeting message.</p>
+    </article>
+  </section>
+
+  <footer>
+    <p>© 2025 My JavaScript Blogs. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
+-------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
+ 
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+ 
+header, footer {
+  background-color: lightcoral;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+ 
+.post {
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.post h2, h3{
+    color: darkblue;
+}
+ 
+.metadata {
+  color: gray;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+ 
+blockquote {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #eee;
+  border-left: 5px solid #999;
+  font-style: italic;
+}
+ 
+pre {
+  background-color: aquamarine;
+  color: black;
+  padding: 15px;
+  overflow-x: auto;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+ 
+code {
+  font-family: "Courier New", Courier, monospace;
+}
+-------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
