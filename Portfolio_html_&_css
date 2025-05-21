@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="web_portfolio.css" />
+    <!-- <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("show");
+        }
+    </script> -->
+</head>
+
+<body>
+    <section class="header-and-hero">
+        <header>
+            <h1>MY PORTFOLIO</h1>
+            <ul id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </header>
+        <section id="hero" class="heroSection">
+            <div class="heroContent">
+                <h1>Hello</h1>
+                <h1>I'm Nandhini</h1>
+                <p>
+                    My portfolio showcases a mix of hand-painted pieces and clean, <br>
+                    minimalist design work.
+                </p>
+                <button class="contactBtn"><a href="#contact">Contact</a></button>
+            </div>
+        </section>
+    </section>
+    <section id="about">
+        <div id="about-content">
+            <h1>About Me</h1>
+            <p>
+                Hello! I’m an artist and graphic designer who finds inspiration in the beauty of nature. I specialize in
+                creating elegant, nature-themed artworks that blend traditional painting with modern digital design.
+                From serene landscapes to intricate floral patterns, my work reflects a deep appreciation for the
+                natural world.
+            </p>
+        </div>
+
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="grid-projects">
+            <div class="grid-type-tall"><img height="200px" width="250px" src="images/4937947.jpg" alt="img_nature">
+            </div>
+            <div class="grid-type-tall">
+                <h1>My Projects</h1>
+            </div>
+            <div class="grid-type-tall"><img height="200px" width="250px" src="images/4066092.jpg" alt="img_nature">
+            </div>
+            <div class="grid-type-tall"><img height="200px" width="250px" src="images/4956073.jpg" alt="img_nature">
+            </div>
+            <div class="grid-type-tall"><img height="200px" width="250px" src="images/6206163.jpg" alt="img_nature">
+            </div>
+            <div class="grid-type-tall"><img height="200px" width="250px" src="images/8392211.jpg" alt="img_nature">
+            </div>
+        </div>
+    </section>
+    <footer id="contact">
+        <div>
+            <ol>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ol>
+        </div>
+        <div>
+            <p><a href="#">hcl@siri@gmail.com</a></p>
+            <p>+91 6655443322</p>
+            <a href="https://www.instagram.com/" target="_blank">
+                <img width="25" height="25" src="https://img.icons8.com/ios/50/instagram-new--v1.png"
+                    alt="instagram-new--v1" />
+            </a>
+            <a href="https://www.whatsapp.com/" target="_blank">
+                <img width="25" height="25" src="https://img.icons8.com/ios/50/whatsapp--v1.png" alt="whatsapp--v1" />
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank">
+                <img width="25" height="25" src="https://img.icons8.com/ios/50/linkedin.png" alt="linkedin" />
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+body{
+   margin: 0px;
+   padding: 0px;
+ 
+ font-family: Arial, Helvetica, sans-serif;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+.header-and-hero{
+    background-image: url(images/Scene-24.jpg);
+    background-size: cover;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    
+    
+}
+header h1 {
+    font-size: 25px;
+}
+ul{
+    display: flex;
+    align-items: center;
+}
+header li{
+        padding: 0px 20px;
+        list-style: none;
+}
+header a{
+    text-decoration: none;
+    color: rebeccapurple;
+    font-weight: bold;
+}
+header a:hover{
+    text-decoration: underline;
+    color: black;
+}
+
+
+.heroSection{
+ 
+    /* margin: 0px 50px; */
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    padding: 0px 100px;
+    justify-content: flex-start;
+   
+    
+}
+.heroContent{
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18); 
+    width: auto;
+    padding: 20px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    
+}
+
+
+.heroContent a{
+   color: white;
+   text-decoration: none;
+}
+
+.contactBtn{
+    /* margin: 20px; */
+    padding: 10px 30px;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: rebeccapurple;
+    color: aliceblue;
+    font-weight: bold;
+    border-color: aliceblue;
+}
+.contactBtn:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 0, 0.511);
+    color: black;
+    font-weight: bolder;
+    border-color: black;
+}
+#about{
+    /* margin: 0px 50px; */
+    color: black;
+    /* height: 50vh; */
+    display: flex;
+    align-items: center;
+    padding: 0px 100px;
+    justify-content: center;
+    background: linear-gradient(rgba(255, 182, 193, 0.363), rgba(255, 182, 228, 0.4), rgba(208, 182, 255, 0.404));
+    
+}
+
+#about-content{
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(98, 0, 255, 0.466); 
+    width: 600px;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+
+
+#about h1{
+    text-align: center;
+    color: blueviolet;
+}
+.projects{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0px 180px;
+    justify-content: center;
+    background-color: aliceblue;
+}
+
+.grid-projects{
+   display: grid;
+  grid-template-columns: auto auto auto;
+  
+}
+
+.grid-type-tall{
+    height: 200px;
+    width: 250px;
+    border: 2px solid Yellow;
+    margin: 10px;
+   text-align: center;
+    background: linear-gradient(rgba(255, 182, 193, 0.363), rgba(255, 182, 228, 0.4), rgba(208, 182, 255, 0.404));
+
+}
+.grid-type-tall h1{
+    font-size: 30px;
+    padding-top: 50px;
+}
+
+
+
+.heroContent h1{
+    font-size: 40px;
+}
+
+footer{
+    display: flex;
+    background-color: cornflowerblue;
+    align-content: center;
+    justify-content: space-around;
+    border-style: inset;
+    border-color: rgba(137, 43, 226, 0.493);
+}
+footer img{
+padding: 10px;
+}
+
+footer li{
+    padding: 10px;
+    list-style: none;
+}
+footer a{
+    color: black;
+    text-decoration: none;
+    text-decoration-style: wavy;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 480px) {
+header li{
+        padding: 0px 8px;
+        list-style: none;
+}
+    .heroSection{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    padding: 0px 100px;
+    justify-content: flex-start;
+}
+
+#about{
+    /* margin: 0px 50px; */
+    color: black;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    padding: 0px 100px;
+    justify-content: flex-start;
+    background: linear-gradient(rgba(255, 182, 193, 0.363), rgba(255, 182, 228, 0.4), rgba(208, 182, 255, 0.404));
+    
+}
+
+#about-content{
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(98, 0, 255, 0.466); 
+    width: auto;
+    padding: 30px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.projects{
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding: 0px 180px;
+    justify-content: center;
+    background-color: aliceblue;
+}
+
+.grid-projects{
+
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin: auto;
+}
+ /* .grid-type-tall{
+    width: 92%;
+ } */
+ .grid-type-tall{
+    height: 200px;
+    width: 250px;
+    border: 2px solid Yellow;
+    margin: 10px;
+   text-align: center;
+  
+}
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
